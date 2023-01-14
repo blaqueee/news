@@ -21,6 +21,7 @@ public abstract class UserMapper {
 
     @Mapping(target = "roles", expression = "java(List.of(roleRepository.findByName(\"ROLE_USER\")" +
             ".orElseThrow(() -> new NotFoundException(\"Role with name ROLE_USER not found!\"))))")
+    @Mapping(target = "avatarUrl", constant = "https://storage.googleapis.com/megalab-news/user.png")
     public abstract User toEntity(RegisterRequest registerRequest);
 
     public abstract UserDto toDto(User user);
