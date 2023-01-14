@@ -14,6 +14,9 @@ public class JwtDto {
     @JsonProperty("id")
     private Long id;
 
+    @JsonProperty("avatar_url")
+    private String avatarUrl;
+
     @JsonProperty("first_name")
     private String firstName;
 

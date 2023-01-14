@@ -10,19 +10,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
+public class CategoryDto {
     @JsonProperty("id")
     private Long id;
 
-    @JsonProperty("avatar_url")
-    private String avatarUrl;
-
-    @JsonProperty("first_name")
-    private String firstName;
-
-    @JsonProperty("last_name")
-    private String lastName;
-
-    @JsonProperty("username")
-    private String username;
+    @JsonProperty("name")
+    private String name;
 }
