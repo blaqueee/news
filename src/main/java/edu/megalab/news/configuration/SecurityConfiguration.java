@@ -50,7 +50,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/api/posts/**").fullyAuthenticated()
+                .antMatchers(HttpMethod.DELETE, "/api/posts/**").fullyAuthenticated()
                 .antMatchers(HttpMethod.POST, "/api/comments/**").fullyAuthenticated()
+                .antMatchers("/api/bookmarks/**").fullyAuthenticated()
                 .anyRequest().permitAll();
 
 
