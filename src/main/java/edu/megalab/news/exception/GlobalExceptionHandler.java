@@ -34,12 +34,6 @@ public class GlobalExceptionHandler {
         return e.getMessage();
     }
 
-    @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public String exceptionHandler(Exception e) {
-        return e.getMessage();
-    }
-
     @ExceptionHandler(FileException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public String fileExceptionHandler(FileException e) {
